@@ -1,0 +1,33 @@
+﻿<Window x:Class="SearchStrings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SearchStrings"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtQuery" HorizontalAlignment="Left" Margin="25,30,0,0" Text="Query String" TextWrapping="Wrap" VerticalAlignment="Top" Width="448" Height="68"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="509,78,0,0" VerticalAlignment="Top" Click="btnClear_Click"/>
+        <Button x:Name="btnRun" Content="Run" HorizontalAlignment="Left" Margin="509,30,0,0" VerticalAlignment="Top" Click="btnRun_Click"/>
+        <ListView x:Name="lstAND" Margin="25,115,273,25">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="lstNOT" Margin="429,115,29,25" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
